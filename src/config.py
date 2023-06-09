@@ -4,6 +4,7 @@ from transformers import TrainingArguments
 dataset_name = 'sxdave/emotion_detection'
 
 model_path = 'google/vit-base-patch16-224-in21k'
+'''
 training_args = TrainingArguments(
   output_dir="./vit-emotior",
   per_device_train_batch_size=16,
@@ -20,3 +21,5 @@ training_args = TrainingArguments(
   report_to='tensorboard',
   load_best_model_at_end=True,
 )
+'''
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
