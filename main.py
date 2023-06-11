@@ -3,4 +3,4 @@
 import torch
 
 #VIT_Train.trai
-torch.zeros(1).cuda()
+print(torch.zeros(1).cuda())
