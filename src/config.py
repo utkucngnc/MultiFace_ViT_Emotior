@@ -2,6 +2,7 @@ import torch
 from transformers import TrainingArguments
 
 dataset_name = 'sxdave/emotion_detection'
+labels = ["happy", "neutral", "sad"]
 
 model_path = 'google/vit-base-patch16-224-in21k'
 

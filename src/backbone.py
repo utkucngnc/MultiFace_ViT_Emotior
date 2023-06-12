@@ -4,7 +4,7 @@ from src.dataset import VIT_Dataset
 
 class VIT_Model:
     def __init__(self) -> None:
-        labels = VIT_Dataset.ds['train'].features['label'].names
+        labels = VIT_Dataset().ds['train'].features['label'].names
 
         self.model = ViTForImageClassification.from_pretrained(
             model_path,

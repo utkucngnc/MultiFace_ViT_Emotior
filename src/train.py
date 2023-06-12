@@ -7,14 +7,14 @@ from src.feature_extractor import Feature_Extractor
 
 class VIT_Train:
     def __init__(self) -> None:
-        self.prepared_ds = Feature_Extractor.apply_transform()
+        self.prepared_ds = Feature_Extractor().apply_transform()
         self.trainer = Trainer(
-            model=VIT_Model.model,
+            model=VIT_Model().model,
             args=training_args,
             data_collator=collate_fn,
             compute_metrics=compute_metrics,
             train_dataset=self.prepared_ds["train"],
-            tokenizer=Feature_Extractor.feature_extractor,
+            tokenizer=Feature_Extractor().feature_extractor,
             )
     
     def train(self):
